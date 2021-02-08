@@ -28,7 +28,7 @@ func (proxy *WinProxy) SetProxy(mode int) {
 			log.Println("can't set ProxyEnable to 1", err.Error())
 		}
 
-		if err := k.SetStringValue("ProxyServer", "localhost:50212"); err != nil {
+		if err := k.SetStringValue("ProxyServer", "socks://127.0.0.1:50212"); err != nil {
 			log.Println("can't set ProxyServer", err.Error())
 		}
 	}
